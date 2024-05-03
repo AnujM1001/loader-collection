@@ -7,7 +7,7 @@ body {
 .loader1,
 .loader2,
 .loader3 {
-  display: none !important;
+  /* display: none !important; */
 }
 .loader1,
 .loader2,
@@ -341,126 +341,53 @@ body {
   }
 }
 
-
-/* Sharingan */
-
-.loader4 {
-  background: #000;
+.loader4.jump {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.loader4.sharingan .pupil {
-  background: #e41414;
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loader4.sharingan .pupil .retina {
-  border: 1px solid #000;
-  width: 60px;
-  height: 60px;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  /* animation: sharingan1Rotate 2s ease-in-out 1; */
-}
-
-.loader4.sharingan .pupil .retina .dot {
-  background: #000;
+.loader4.jump .bar{
   width: 10px;
-  height: 10px;
-  position: absolute;
-  border-radius: 10px; 
+  min-height: 10px;
+  border: 1px solid #e0e0e0;
+  animation: heightAnim 3s ease-in-out infinite;
 }
-
-.loader4.sharingan .pupil .retina .dot.dot1 {
-  animation: sharingan1Dot 1s ease-in-out 1;
-  top: calc(14%);
-  left: calc(1%);
-  transform: rotate(-35deg);
+.loader4.jump .bar.bar2{
+  animation-delay: 0.5s;
 }
-
-.loader4.sharingan .pupil .retina .dot.dot2 {
-  top: calc(30%);
-    left: calc(93%);
-    transform: rotate(105deg);
-    animation: sharingan2Dot 1s ease-in-out 1 2s;
-    animation-fill-mode: forwards;
+.loader4.jump .bar.bar3{
+  animation-delay: 1s;
 }
-.loader4.sharingan .pupil .retina .dot.dot3 {
-  display: none;
-  top: calc(92%);
-    left: calc(33%);
-    transform: rotate(205deg);
+.loader4.jump .bar.bar4{
+  animation-delay: 1.5s;
 }
-
-.loader4.sharingan .pupil .retina .dot.dot1::before,
-.loader4.sharingan .pupil .retina .dot.dot2::before,
-.loader4.sharingan .pupil .retina .dot.dot3::before {
-    content: '';
-    width: 9px;
-    height: 7px;
-    position: absolute;
-    top: -4px;
-    left: 1px;
-    border-left: 6px solid #000;
-    border-radius: 100% 0 0 0;
-  }
-  
-.loader4.sharingan .pupil .retina .dot.dot1::before {
-  animation: sharingan1DotBefore 1s ease-in-out 1;
+.loader4.jump .bar.bar5{
+  animation-delay: 2s;
 }
-
-
-
-
-@keyframes sharingan1Dot {
-  0% {
-    top: calc(50% - 5px);
-    left: calc(50% - 5px);
-  }
-  100% {
-    top: calc(14%);
-    left: calc(1%);
-  }
+.loader4.jump .bar.bar6{
+  animation-delay: 2.5s;
 }
-
-@keyframes sharingan1DotBefore {
-  0% {
-    width: 0;
-    height: 0;
-  }
-  100% {
-    width: 9px;
-    height: 7px;
-  }
+.loader4.jump .bar.bar7{
+  animation-delay: 3s;
 }
-
-@keyframes sharingan2Dot {
-  0% {
-    top: calc(14%);
-    left: calc(1%);
-    display: block;
-  }
-  100% {
-    top: calc(30%);
-    left: calc(93%);
-    display: block;
-  }
+.loader4.jump .bar.bar8{
+  animation-delay: 3.5s;
 }
+ @keyframes heightAnim {
+    0% {
+      height: 10px;
+      background-color: darkgrey;
+    }
+    50% {
+      height: 50px;
+      background-color: cadetblue;
+    }
+    100% {
+      background-color: darkgrey;
+      height: 10px;
+    }
+ }
 
-@keyframes sharingan1Rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
+
+
